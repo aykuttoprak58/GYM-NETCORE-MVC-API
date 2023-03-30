@@ -1,0 +1,47 @@
+﻿@using GYM.Entities;
+@{
+    ViewData["Title"] = "Listele";
+}
+
+<h1>KULLANICI LİSTESİ</h1>
+
+@model List<UserEntity>
+<a href="/User/EkleEkranı" class="btn btn-danger">Kullanıcı Ekle</a>
+<a class="btn" style="background-color:blue; color:white" asp-controller="User" asp-action="EkleEkranı">Kullanıcı Ekle</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>surname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>salonId</th>
+            <th>courseId</th>
+            <th>tranierId</th>
+            <th>Detail Process</th>
+            <th>Delete Process</th>
+            <th>Update Process</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.surname</td>
+                <td>@item.age</td>
+                <td>@item.gender</td>
+                <td>@item.salonId</td>
+                <td>@item.courseId</td>
+                <td>@item.tranierId</td>
+                <td> <a class="btn btn-primary" asp-controller="User" asp-action="Detay" asp-route-id="@item.id">Detail</a></td>
+                <td> <a class="btn btn-danger" asp-controller="User" asp-action="SilmeEkranı" asp-route-id="@item.id">Delete</a></td>
+                <td> <a class="btn btn-success" asp-controller="User" asp-action="GüncelleEkranı" asp-route-id="@item.id">Update</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

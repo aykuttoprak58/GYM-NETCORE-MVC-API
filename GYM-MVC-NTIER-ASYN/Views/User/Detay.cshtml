@@ -1,0 +1,37 @@
+﻿@using GYM.Entities.Asyn;
+@{
+    ViewData["Title"] = "Detay";
+}
+
+<h1>Detay</h1>
+
+@model UserEntity
+
+<form asp-controller="user" asp-action="listele" method="get">
+    <div class="mb-3">
+        <label asp-for="name">AD</label>  <input type="text" asp-for="name">
+    </div>
+    <div class="mb-3">
+        <label asp-for="surname">SOYAD</label>  <input type="text" asp-for="surname">
+    </div>
+    <div class="mb-3">
+        <label asp-for="age">YAŞ</label>  <input type="text" asp-for="age">
+    </div>
+    <div class="mb-3">
+        <label asp-for="gender">CİNSİYET</label>  <input type="text" asp-for="gender">
+    </div>
+    <div class="mb-3">
+        <label asp-for="salonId"></label>
+        <input type="text" asp-for="salonId">
+    </div>
+    <div class="mb-3">
+        <label asp-for="courseId">courseID</label>
+        <input type="text" asp-for="courseId">
+    </div>
+    <div class="mb-3">
+        <label asp-for="tranierId">tranierId</label>
+        <input type="text" asp-for="tranierId">
+    </div>
+
+    <button class="btn btn-primary" type="submit">Listeye Geri Dön</button>
+</form>

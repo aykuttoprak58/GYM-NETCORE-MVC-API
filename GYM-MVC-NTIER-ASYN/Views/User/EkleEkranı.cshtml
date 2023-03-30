@@ -1,0 +1,43 @@
+﻿@using GYM.Entities.Asyn
+@{
+    ViewData["Title"] = "EkleEkranı";
+}
+
+<h1>EkleEkranı</h1>
+
+<h1>Kullanıcı Ekle</h1>
+
+@model UserEntity
+
+<form asp-controller="user" asp-action="ekle" method="post">
+    <div class="mb-3">
+        <label asp-for="name" class="form-label">name</label>
+        <input type="text" class="form-control" asp-for="name">
+    </div>
+    <div class="mb-3">
+        <label asp-for="surname" class="form-label">surname</label>
+        <input type="text" class="form-control" asp-for="surname">
+    </div>
+    <div class="mb-3">
+        <label asp-for="age" class="form-label">age</label>
+        <input type="text" class="form-control" asp-for="age">
+    </div>
+    <div class="mb-3">
+        <label asp-for="gender" class="form-label">gender</label>
+        <input type="text" class="form-control" asp-for="gender">
+    </div>
+    <div class="mb-3">
+        <label asp-for="salonId" class="form-label">salonId</label>
+        <input type="text" class="form-control" asp-for="salonId">
+    </div>
+    <div class="mb-3">
+        <label asp-for="courseId" class="form-label">courseID</label>
+        <input type="text" class="form-control" asp-for="courseId">
+    </div>
+    <div class="mb-3">
+        <label asp-for="tranierId" class="form-label">tranierId</label>
+        <input type="text" class="form-control" asp-for="tranierId">
+    </div>
+
+    <button class="btn btn-primary" type="submit">Kullanıcı Kaydet</button>
+</form>

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+@model List<userEntity>
+
+<h1>USERS</h1>
+<a href="/User/add" class="btn btn-danger">Kullanıcı Ekle</a>
+<a class="btn" style="background-color:blue; color:white" asp-controller="User" asp-action="add">Kullanıcı Ekle</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>surname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>salonId</th>
+            <th>courseId</th>
+            <th>tranierId</th>
+            <th>Delete Process</th>
+            <th>Update Process</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.surname</td>
+                <td>@item.age</td>
+                <td>@item.gender</td>
+                <td>@item.salonId</td>
+                <td>@item.courseId</td>
+                <td>@item.tranierId</td>
+                <td> <a class="btn btn-danger" asp-controller="User" asp-action="DeleteGet" asp-route-id="@item.id">Sil</a></td>
+                <td> <a class="btn btn-success" asp-controller="User" asp-action="Update" asp-route-id="@item.id">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
