@@ -7,4 +7,4 @@ MVC ve API teknolojilerinde ayrıca katmanlı mimari ve asenkron programlama kul
 5. Proje ASP.NET CORE MVC KATMANLI MIMARI ASENKRON PROGRAMLAMA
 6. Proje ASP.NET CORE WEB API KATMANLI MIMARI ASENKRON PROGRAMLAMA
 
-Bu proje zaman bulundukta yeni teknolojilerin sırayla eklenmesi ile gücellenecektir.
+Bu proje zaman bulundukça yeni teknolojilerin sırayla eklenmesi ile gücellenecektir.
