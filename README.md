@@ -1,5 +1,9 @@
 Bu projede Temel MVC ve API için CRUD işlemleri yapılmıştır.
-Not:Tablolar ilişkili olduğundan dolayı Kullanıcı kaydı yapmak için öncelikle veritabanından tarnier,course ve salon tablolarını doldurmanız gerekmektedir.Aksi takdirde kullnıcı kaydı yapılmaz sadece kullanıcı için mvc controller ve api controller oluşturulmuştur.
+
+Not:Tablolar ilişkili olduğundan dolayı Kullanıcı kaydı yapmak için öncelikle veritabanından tarnier,course ve salon tablolarını doldurmanız gerekmektedir.Aksi takdirde 
+
+
+kullnıcı kaydı yapılmaz sadece kullanıcı için mvc controller ve api controller oluşturulmuştur.
 MVC ve API teknolojilerinde ayrıca katmanlı mimari ve asenkron programlama kullanılmış olup 6 proje oluşturulmuştur.
 1. Proje sadece ASP.NET CORE MVC
 2. Proje sadece ASP.NET CORE WEB API
