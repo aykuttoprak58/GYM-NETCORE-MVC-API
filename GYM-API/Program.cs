@@ -1,4 +1,4 @@
-using GYM.Models;
+using GYM_API.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

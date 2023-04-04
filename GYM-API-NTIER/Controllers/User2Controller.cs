@@ -17,13 +17,13 @@ namespace GYM_API_NTIER.Controllers
 
             userService = userService2;
         }
-        
-     
+
+
         /// <summary>
         /// Get All Users
         /// </summary>
         /// <returns></returns>
-       
+
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -34,8 +34,8 @@ namespace GYM_API_NTIER.Controllers
                 return Ok(user);
             }
 
-            return BadRequest("KULLANCI TABLOSU BOŞ LÜTFEN KULLANICI EKLENİYİZ"); 
-        
+            return BadRequest("KULLANCI TABLOSU BOŞ LÜTFEN KULLANICI EKLENİYİZ");
+
         }
 
         /// <summary>
@@ -47,13 +47,13 @@ namespace GYM_API_NTIER.Controllers
         public IActionResult GetById(int id)
         {
             var user = userService.GetById(id);
-            if (user != null) 
+            if (user != null)
             {
                 return Ok(user);
             }
 
-            return BadRequest($"Belirtilen id'ye sahip kullanıcı bulunamadı");    
-        
+            return BadRequest($"Belirtilen id'ye sahip kullanıcı bulunamadı");
+
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace GYM_API_NTIER.Controllers
                 userService.Add(entity);
                 return Ok("Kullanıcı Eklendi");
             }
-            return BadRequest("Kullanıcı eklenemedi");    
+            return BadRequest("Kullanıcı eklenemedi");
 
         }
 
@@ -118,13 +118,13 @@ namespace GYM_API_NTIER.Controllers
         /// <returns></returns>
 
         [HttpPut]
-        public async Task <IActionResult> Update(UserEntity entity)
+        public async Task<IActionResult> Update(UserEntity entity)
         {
             var user = userService.GetById(entity.id);
-            if (user != null) 
+            if (user != null)
             {
                 userService.Update(entity);
-                
+
                 return Ok("Kullanıcı Güncellendi");
             }
             return BadRequest("Kullanıcı Güncellenmedi");

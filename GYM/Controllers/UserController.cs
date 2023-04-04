@@ -7,11 +7,11 @@ namespace GYM.Controllers
     public class UserController : Controller
     {
         private readonly gymDbContext gymDbContext;
-        private readonly DbSet<userEntity> ada;
+        private readonly DbSet<userEntity> dbset;
         public UserController(gymDbContext gymDbContext2)
         {
             gymDbContext = gymDbContext2;
-            ada = gymDbContext.Set<userEntity>();
+            dbset = gymDbContext.Set<userEntity>();
 
        
         }
@@ -19,9 +19,9 @@ namespace GYM.Controllers
         [HttpGet]
         public IActionResult List()
         {
-            var salon2 = ada.ToList(); 
-            //var salon = gymDbContext.userEntitity.ToList();
-            return View(salon2);
+            var salon = gymDbContext.userEntitity.ToList();
+            //var salon2 = dbset.ToList(); 
+            return View(salon);
         }
 
         [HttpGet]

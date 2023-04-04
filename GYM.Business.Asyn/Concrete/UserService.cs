@@ -20,32 +20,32 @@ namespace GYM.Business.Asyn.Concrete
 
         public async Task<UserEntity> Add(UserEntity userEntity)
         {
-            return await userRepository.Add(userEntity);        
+            return await userRepository.Add(userEntity);
         }
 
         public async Task<UserEntity> Delete(int id)
         {
-            return await userRepository.Delete(id);   
+            return await userRepository.Delete(id);
         }
 
         public async Task<List<UserEntity>> GetAll()
         {
-            return await userRepository.GetAll();     
+            return await userRepository.GetAll();
         }
 
         public async Task<UserEntity> GetById(int id)
         {
-           return await userRepository.GetById(id); 
+            return await userRepository.GetById(id);
         }
 
         public async Task<UserEntity> GetByName(string name)
         {
-            return await userRepository.GetByName(name);    
+            return await userRepository.GetByName(name);
         }
 
         public async Task<UserEntity> Update(UserEntity userEntity)
         {
-            return await userRepository.Update(userEntity);     
+            return await userRepository.Update(userEntity);
         }
     }
 }

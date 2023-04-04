@@ -23,9 +23,9 @@ namespace GYM_API_NTIER_ASYN.Controllers
         {
             var user = await userService.GetAll();
 
-           bool sonuc = user.IsNullOrEmpty();   
+            bool sonuc = user.IsNullOrEmpty();
 
-            if ( sonuc == false)
+            if (sonuc == false)
             {
                 return Ok(user);
 
@@ -50,9 +50,9 @@ namespace GYM_API_NTIER_ASYN.Controllers
         }
 
         [HttpGet("name")]
-         public async Task<IActionResult> GetByName(string name)
+        public async Task<IActionResult> GetByName(string name)
         {
-            var user =await userService.GetByName(name);
+            var user = await userService.GetByName(name);
             if (user != null)
             {
                 return Ok(user);
@@ -97,7 +97,7 @@ namespace GYM_API_NTIER_ASYN.Controllers
             var user = await userService.GetById(entity.id);
             if (user != null)
             {
-               await userService.Update(entity);
+                await userService.Update(entity);
 
                 return Ok("Kullanıcı Güncellendi");
             }

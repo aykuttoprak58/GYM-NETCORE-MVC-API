@@ -6,7 +6,7 @@ namespace GYM_MVC_NTIER.Controllers
 {
     public class UserController : Controller
     {
-       private readonly IUserService UserService;
+        private readonly IUserService UserService;
 
         public UserController(IUserService userService)
         {
@@ -17,7 +17,7 @@ namespace GYM_MVC_NTIER.Controllers
         [HttpGet]
         public IActionResult EkleEkranı()
         {
-           
+
             return View();
         }
 
@@ -27,7 +27,7 @@ namespace GYM_MVC_NTIER.Controllers
         public IActionResult Ekle(UserEntity userEntity)
         {
             UserService.Add(userEntity);
-            return RedirectToAction("Listele");       
+            return RedirectToAction("Listele");
         }
         [HttpGet]
         public IActionResult Listele()
@@ -39,13 +39,10 @@ namespace GYM_MVC_NTIER.Controllers
 
         public IActionResult Detay(int id)
         {
-            var salon = UserService.GetById(id);    
+            var salon = UserService.GetById(id);
 
             return View(salon);
         }
-
-
-
 
 
         [HttpGet]
@@ -63,7 +60,7 @@ namespace GYM_MVC_NTIER.Controllers
         }
 
         [HttpGet]
-        public IActionResult SilmeEkranı(int id     )
+        public IActionResult SilmeEkranı(int id)
         {
             var salon = UserService.GetById(id);
             return View(salon);

@@ -106,7 +106,40 @@ namespace GYM.DataAccessLayer.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("courseId");
+
+                    b.HasIndex("salonId");
+
+                    b.HasIndex("tranierId");
+
                     b.ToTable("userEntitity");
+                });
+
+            modelBuilder.Entity("GYM.Entities.UserEntity", b =>
+                {
+                    b.HasOne("GYM.Entities.CourseEntity", "courseEntity")
+                        .WithMany()
+                        .HasForeignKey("courseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GYM.Entities.SalonEntity", "salonEntity")
+                        .WithMany()
+                        .HasForeignKey("salonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GYM.Entities.TranierEntity", "tranierEntity")
+                        .WithMany()
+                        .HasForeignKey("tranierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("courseEntity");
+
+                    b.Navigation("salonEntity");
+
+                    b.Navigation("tranierEntity");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,18 +9,18 @@ namespace GYM_API_NTIER.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-      private readonly IUserService userService;
+        private readonly IUserService userService;
 
         public UserController(IUserService userService2)
         {
             userService = userService2;
         }
         [HttpGet]
-        public List<UserEntity> GetAll() 
+        public List<UserEntity> GetAll()
         {
-           var user = userService.GetAll();
+            var user = userService.GetAll();
 
-            return user;  
+            return user;
 
         }
 
@@ -32,29 +32,29 @@ namespace GYM_API_NTIER.Controllers
         }
 
         [HttpDelete("id")]
-        public UserEntity Delete(int id) 
+        public UserEntity Delete(int id)
         {
 
-            return userService.Delete(id);    
+            return userService.Delete(id);
 
         }
 
         [HttpPost]
 
-        public UserEntity Add(UserEntity entity) 
-        { 
-        
-        return userService.Add(entity);  
+        public UserEntity Add(UserEntity entity)
+        {
+
+            return userService.Add(entity);
 
         }
 
         [HttpPut]
-        public UserEntity Update(UserEntity entity) 
-        { 
-        
-            return userService.Update(entity);  
-        
-        } 
+        public UserEntity Update(UserEntity entity)
+        {
+
+            return userService.Update(entity);
+
+        }
 
 
 
